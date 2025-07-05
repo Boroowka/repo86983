@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.0] – 2025-07-05
+### Added
+- Funkcja potęgowania `poteguj(a, b)`
+
+
 ## [v1.1.1] - 2025-07-05
 ### Fixed
 - Poprawiono literówkę w komunikacie powitalnym

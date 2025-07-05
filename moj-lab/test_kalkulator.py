@@ -21,6 +21,10 @@ class TestKalkulator(unittest.TestCase):
     def test_dzielenie_przez_zero(self):
         with self.assertRaises(ZeroDivisionError):
             self.k.dziel(5, 0)
+	def test_potegowanie(self):
+		self.assertEqual(self.k.poteguj(2, 3), 8)
+
+
 
 if __name__ == "__main__":
     unittest.main()
