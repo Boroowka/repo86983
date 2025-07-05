@@ -1,0 +1,19 @@
+name: CD Pipeline (Symulacja)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build-and-test]
+
+    steps:
+    - name: Checkout kodu
+      uses: actions/checkout@v3
+
+    - name: Symulacja wdrożenia
+      run: |
+        echo "Wdrożenie zakończone sukcesem 🎉"
+        echo "Data: $(date)"
