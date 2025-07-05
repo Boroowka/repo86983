@@ -32,3 +32,7 @@ Instrukcja, jak uruchomić projekt lokalnie:
 git clone https://github.com/Boroowka/repo86983.git
 cd repo86983
 python main.py
+
+## Nowe funkcje
+
+- `poteguj(a, b)` – potęgowanie liczby `a` do potęgi `b`

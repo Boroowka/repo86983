@@ -12,3 +12,5 @@ class Kalkulator:
         if b == 0:
             raise ZeroDivisionError("Nie można dzielić przez zero")
         return a / b
+	def poteguj(self, a, b):
+		return a ** b
