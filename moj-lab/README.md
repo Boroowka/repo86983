@@ -44,6 +44,28 @@ Należy dodać do repozytorium w **Settings > Secrets** następujące sekrety:
 
 Aplikacja udostępnia endpoint `/health`, który zwraca status 200 OK. Pipeline wykonuje prosty test tego endpointu po wdrożeniu.
 
+## Workflow CI/CD
+
+- **CI:** Przy każdym pushu na dowolną gałąź wykonywane są testy i analiza jakości kodu.
+- **CD:** Przy pushu na gałąź `main` wykonywane jest automatyczne wdrożenie (symulacja).
+- W przypadku niepowodzenia wdrożenia pipeline jest zatrzymywany.
+
+
+# Konfiguracja środowiska i deployment
+
+1. Dodaj sekrety w GitHub:
+   - `TEST_SECRET` – testowy sekret
+   - Inne, jeśli potrzebne
+
+2. Pipeline CD:
+   - Uruchamia się przy pushu na main
+   - Wykonuje testy, buduje obraz (opcjonalnie)
+   - Symuluje wdrożenie
+   - Wykonuje health check
+
+3. Aplikacja posiada endpoint `/health` do monitoringu.
+
+
 
 ## ⚙️ Instalacja
 
