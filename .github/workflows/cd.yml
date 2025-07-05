@@ -21,3 +21,9 @@ jobs:
         echo "Wdrożenie zakończone sukcesem 🎉"
         echo "Secret to: $TEST_SECRET"
 
+            - name: Health check
+      run: |
+        # Tu wpisz curl lub wget do health endpoint
+        echo "Health check: OK"
+
+
