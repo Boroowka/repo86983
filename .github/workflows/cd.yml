@@ -13,7 +13,11 @@ jobs:
     - name: Checkout kodu
       uses: actions/checkout@v3
 
+     steps:
     - name: Symulacja wdrożenia
+      env:
+        TEST_SECRET: ${{ secrets.TEST_SECRET }}
       run: |
         echo "Wdrożenie zakończone sukcesem 🎉"
-        echo "Data: $(date)"
+        echo "Secret to: $TEST_SECRET"
+
